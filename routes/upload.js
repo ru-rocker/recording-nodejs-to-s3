@@ -4,7 +4,7 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const crypto = require("crypto");
 
-const s3 = new S3Client();
+const s3 = new S3Client({region: 'ap-southeast-1'});
 const router = express.Router();
 const bucketName = 'azid-dcv-test-transcribe';
 
