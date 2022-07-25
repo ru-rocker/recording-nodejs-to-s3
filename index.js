@@ -8,7 +8,7 @@ const uploadRouter = require('./routes/upload');
 
 app.use(express.static('public/assets'));
 
-app.get('/audio', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 app.use('/record', uploadRouter);
